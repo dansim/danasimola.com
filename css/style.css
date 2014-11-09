@@ -1,0 +1,52 @@
+html {
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: streetStencil;
+    src: url(fonts/Street%20Stencil.ttf);
+}
+
+@font-face {
+    font-family: fmcOut;
+    src: url(fonts/Fmcout.ttf);
+}
+
+@font-face {
+    font-family: queFonita;
+    src: url(fonts/Que_FONTita_21.otf);
+}
+
+h1 {
+    font-family: queFonita !important;
+    font-size: 5em;
+    color :#f5f5f5;
+}
+
+/** under **/
+.cl-effect-15 a {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: none;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/** over **/
+.cl-effect-15 a::before {
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.cl-effect-15 a:hover::before,
+.cl-effect-15 a:focus::before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
